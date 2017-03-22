@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Flatsome v2.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-03-18 12:37+0700\n"
+"PO-Revision-Date: 2017-03-21 23:01+0700\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr ""
 #: archive.php:40
 #, php-format
 msgid "Category Archives: %s"
-msgstr "Lưu trữ danh mục: %s"
+msgstr "Chuyên mục: %s"
 
 # @ flatsome
 #: archive.php:43
@@ -354,7 +354,7 @@ msgid ""
 "at top of the category."
 msgstr ""
 "Nhập một giá trị cho trường này. Shortcode được cho phép. Nó sẽ được hiển "
-"thị ở trên cùng của danh mục"
+"thị ở trên cùng của chuyên mục"
 
 # @ default
 #: inc/post-types/blocks.php:30
