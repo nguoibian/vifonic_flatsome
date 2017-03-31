@@ -63,7 +63,11 @@ add_ux_builder_shortcode( 'team_member', array(
                         'small' => array( 'title' => 'Small' ),
                     ),
                 ),
+                //-------------
+                'hnc_tel' => array( 'type' => 'textfield','heading' => 'Tel', 'default' => ''),
                 'facebook' => array( 'type' => 'textfield','heading' => 'Facebook', 'default' => ''),
+                'hnc_skype' => array( 'type' => 'textfield','heading' => 'Skype', 'default' => ''),
+                //---------------
                 'twitter' => array( 'type' => 'textfield','heading' => 'Twitter', 'default' => ''),
                 'youtube' => array( 'type' => 'textfield','heading' => 'Youtube', 'default' => ''),
                 'email' => array( 'type' => 'textfield','heading' => 'Email', 'default' => ''),

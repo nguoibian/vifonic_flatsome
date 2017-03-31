@@ -30,7 +30,7 @@ function flatsome_share($atts, $content = null) {
 
 	// Get Custom Theme Style
 	if(!$style) $style = get_theme_mod('social_icons_style','outline');
-	
+
 	$classes = get_flatsome_icon_class($style);
 	$classes = $classes.' tooltip';
 
@@ -41,7 +41,7 @@ function flatsome_share($atts, $content = null) {
 
 	// Align
 	if($align) $align = 'full-width text-'.$align;
-	
+
 	// Fix old depricated
 	if(!isset($share[0])){
 		$fix_share = array();
@@ -76,12 +76,12 @@ function flatsome_share($atts, $content = null) {
           <a href="//tumblr.com/widgets/share/tool?canonicalUrl=<?php echo $permalink; ?>" target="_blank" class="<?php echo $classes;?> tumblr" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="nofollow" title="<?php _e('Share on Tumblr','flatsome'); ?>"><?php echo get_flatsome_icon('icon-tumblr'); ?></a>
           <?php } ?>
     </div>
-    
+
     <?php
 	$content = ob_get_contents();
 	ob_end_clean();
 	return $content;
-} 
+}
 add_shortcode('share','flatsome_share');
 
 
@@ -107,7 +107,10 @@ function flatsome_follow($atts, $content = null) {
 		'vkontakte' => '',
 		'px500' => '',
 		'snapchat' => '',
-
+        //--------------
+        'hnc_skype' => '',
+        'hnc_tel' => '',
+        //--------------
 		// Depricated
 		'size' => '',
 
@@ -118,8 +121,8 @@ function flatsome_follow($atts, $content = null) {
 
 	// Get Defaults
 	if($defaults){
-		$twitter = get_theme_mod('follow_twitter'); 
-		$facebook = get_theme_mod('follow_facebook'); 
+		$twitter = get_theme_mod('follow_twitter');
+		$facebook = get_theme_mod('follow_facebook');
 		$instagram = get_theme_mod('follow_instagram');
 		$snapchat = get_theme_mod('follow_snapchat');
 		$youtube = get_theme_mod('follow_youtube');
@@ -131,6 +134,10 @@ function flatsome_follow($atts, $content = null) {
 		$flickr = get_theme_mod('follow_flickr');
 		$email = get_theme_mod('follow_email');
 		$rss = get_theme_mod('follow_rss');
+        //-----------
+        $hnc_skype = get_theme_mod('follow_hnc_skype');
+        $hnc_tel = get_theme_mod('follow_hnc_tel');
+        //-----------
 	}
 
 	$style = get_flatsome_icon_class($style);
@@ -146,10 +153,20 @@ function flatsome_follow($atts, $content = null) {
     	<?php if($title){?>
     	<span><?php echo $title; ?></span>
 		<?php }?>
-    	<?php if($facebook){?>
-    	<a href="<?php echo $facebook; ?>" target="_blank" data-label="Facebook"  rel="nofollow" class="<?php echo $style; ?> facebook tooltip" title="<?php _e('Follow on Facebook','flatsome') ?>"><?php echo get_flatsome_icon('icon-facebook'); ?>
-    	</a>
-		<?php }?>
+    	<!-- ================= -->
+        <?php if($hnc_tel){?>
+               <a href="tel:0<?php echo $hnc_tel; ?>" target="_blank" data-label="Tel" rel="nofollow" class="<?php echo $style; ?> phone tooltip" title="<?php _e('Call me!','flatsome') ?>"><?php echo get_flatsome_icon('icon-phone'); ?>
+               </a>
+        <?php }?>
+        <?php if($facebook){?>
+        <a href="<?php echo $facebook; ?>" target="_blank" data-label="Facebook"  rel="nofollow" class="<?php echo $style; ?> facebook tooltip" title="<?php _e('Follow on Facebook','flatsome') ?>"><?php echo get_flatsome_icon('icon-facebook'); ?>
+        </a>
+        <?php }?>
+        <?php if($hnc_skype){?>
+               <a href="skype:<?php echo $hnc_skype; ?>?chat" target="_blank" data-label="Skype" rel="nofollow" class="<?php echo $style; ?> skype tooltip" title="<?php _e('Follow on Skype','flatsome') ?>"><?php echo get_flatsome_icon('icon-skype'); ?>
+               </a>
+        <?php }?>
+        <!-- ===================== -->
 		<?php if($instagram){?>
 		    <a href="<?php echo $instagram; ?>" target="_blank" rel="nofollow" data-label="Instagram" class="<?php echo $style; ?>  instagram tooltip" title="<?php _e('Follow on Instagram','flatsome')?>"><?php echo get_flatsome_icon('icon-instagram'); ?>
 		   </a>

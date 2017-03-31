@@ -37,6 +37,11 @@ function flatsome_team_member($atts, $content = null){
       'image_hover' => '',
       'image_hover_alt' => '',
       'image_overlay' => '',
+
+      //--------------
+        'hnc_skype' => '',
+        'hnc_tel' => '',
+        //--------------
   ), $atts ) );
 
 
@@ -117,7 +122,7 @@ function flatsome_team_member($atts, $content = null){
                       <?php echo $title; ?>
                     </small>
                   </h4>
-                 <?php echo do_shortcode('[follow style="'.$icon_style.'" facebook="'.$facebook.'" twitter="'.$twitter.'" snapchat="'.$snapchat.'" email="'.$email.'" pinterest="'.$pinterest.'" youtube="'.$youtube.'" instagram="'.$instagram.'" linkedin="'.$linkedin.'"]'); ?>
+                 <?php echo do_shortcode('[follow style="'.$icon_style.'" facebook="'.$facebook.'" twitter="'.$twitter.'" snapchat="'.$snapchat.'" email="'.$email.'" pinterest="'.$pinterest.'" youtube="'.$youtube.'" instagram="'.$instagram.'" linkedin="'.$linkedin.'" hnc_skype="'.$hnc_skype.'" hnc_tel="'.$hnc_tel.'"]'); ?>
                  <?php if($style  !== 'overlay' && $style  !== 'shade') echo do_shortcode($content); ?>
                 </div><!-- box-text-inner -->
           </div><!-- box-text -->
