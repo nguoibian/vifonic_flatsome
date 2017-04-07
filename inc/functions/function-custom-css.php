@@ -227,10 +227,10 @@ if($alert_color && $alert_color !== '#b20000'){ ?>
 
 <?php
 // Get Type options
-$type_nav = get_theme_mod('type_nav', array('font-family'=> 'Lato','variant' => '700'));
-$type_texts = get_theme_mod('type_texts', array('font-family'=> 'Lato','variant' => '400'));
-$type_headings = get_theme_mod('type_headings',array('font-family'=> 'Lato','variant' => '700'));
-$type_alt = get_theme_mod('type_alt', array('font-family'=> 'Dancing Script'));
+$type_nav = get_theme_mod('type_nav', array('font-family'=> 'Roboto','variant' => '700'));
+$type_texts = get_theme_mod('type_texts', array('font-family'=> 'Roboto','variant' => '400'));
+$type_headings = get_theme_mod('type_headings',array('font-family'=> 'Roboto','variant' => '700'));
+$type_alt = get_theme_mod('type_alt', array('font-family'=> 'Roboto'));
 
 // Type sizes
 if(get_theme_mod('type_size') !== 100){

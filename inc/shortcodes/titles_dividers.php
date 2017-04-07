@@ -6,7 +6,7 @@ function title_shortcode( $atts, $content = null ){
     'text' => '',
     'sub_text' => '',
     'style' => 'normal',
-    'font_size' => '100',
+    'size' => '100',
     'link' => '',
     'link_text' => '',
     'target' => '',
@@ -34,7 +34,7 @@ function title_shortcode( $atts, $content = null ){
   );
 
   $css_args_title = array(
-   array( 'attribute' => 'font-size', 'value' => $font_size, 'unit' => '%'),
+   array( 'attribute' => 'font-size', 'value' => $size, 'unit' => '%'),
   );
 
   return '<div class="container section-title-container" '.get_shortcode_inline_css($css_args).'><h3 class="section-title section-title-'.$style.'"><b></b><span class="section-title-main" '.get_shortcode_inline_css($css_args_title).'>'.$icon.$atts['text'].$small_text.'</span><b></b>'.$link_output.'</h3></div><!-- .section-title -->';
