@@ -14,3 +14,5 @@ License URI:
 All custom CSS should be added to VIFONIC > Advanced > Custom CSS,
 or in the style.css of a Child Theme.
 ***************/
+
+@import "assets/css/vifonic.css";
